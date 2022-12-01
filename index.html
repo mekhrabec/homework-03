@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+
+    /*---------- 1 ------------*/
+
+
+    var a = 1;
+    var b = 2;
+    var c = 3;
+
+    var resault = a ** 2 + b ** 2 + c ** 2 ;
+
+    console.log(resault);
+
+    /*---------- 2 ------------*/
+
+    const arr = [1, 2, 3];
+    const average = arr.reduce((a, b) => a + b, 0) / arr.length;
+    console.log(average);
+
+    /*---------- 3 ------------*/
+
+    for(let i = 0;i <= 100;i++){
+    console.log(i);
+    }
+
+    /*---------- 4 ------------*/
+
+    for(let i = 0;i <= 100;i+=2){
+    console.log(i);
+    }
+
+    /*---------- 5 ------------*/
+
+    for (var i=1; i <= 100; i++){
+        if (i % 3 == 0)
+        console.log(i);
+
+    }
+    
+    /*---------- 6 ------------*/
+
+    let count=0
+
+    for(j=2;j<=100;j++)
+    {
+    for( i=1;i<=j;i++)
+    {
+    if(j%i==0)
+    count++ 
+    }
+
+    if(count==2)
+    console.log(j)
+    count=0      
+    }
+    
+    /*---------- 7 ------------*/;
+
+    let stringSquare = '';
+    for(let i=1; i<=5; i++){
+    for(let j=1; j<=5; j++){
+        stringSquare += '* ';
+    }
+    stringSquare += '\n';
+    }
+    console.log(stringSquare);
+
+    /*---------- 8 ------------*/;
+
+    for(var i=5; i>=1; i--){
+       console.log("* ".repeat(i));
+    }
+
+
+    
+
+
+
+</script>
+
+</body>
+</html>
