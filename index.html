@@ -1,87 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+
 <body>
+ <script>
+
+//--2
+
+ function FindForPrice(min, max){
+ products.forEach(function(elem){
+ if(elem.price>=min && elem.price<=max){
+ return elem;
+ }
+ })
+ }
+//--3
+
+ let sortedProducts = products.sort(function (a, b) {
+ if(a.rating.rate != b.rating.rate){
+ return a.rating.rate - b.rating.rate
+ }else{
+ return a.rating.count - b.rating.count
+ }
+ })
+ console.log(sortedProducts);
+
+//--4 
+ function FindForTitle(word){
+
+ search = products.filter(q=>q.title.toLowerCase().startsWith(word))
+ return search;
+
+ }
+
+//--5
+ function FindForCategory(category){
+ return products.filter(q=>q.category.includes(category))
+ }
+ 
+
+  
+//--1
+
+function FindForID(id){
+ 
+ products.find(function(elem){
+ if(elem.id == id){
+ return elem.title, elem.description;
+ }
+ })
+
+ }
 
 
-<script>
-
-    /*---------- 1 ------------*/
-
-
-    var a = 1;
-    var b = 2;
-    var c = 3;
-
-    var resault = a ** 2 + b ** 2 + c ** 2 ;
-
-    console.log(resault);
-
-    /*---------- 2 ------------*/
-
-    const arr = [1, 2, 3];
-    const average = arr.reduce((a, b) => a + b, 0) / arr.length;
-    console.log(average);
-
-    /*---------- 3 ------------*/
-
-    for(let i = 0;i <= 100;i++){
-    console.log(i);
-    }
-
-    /*---------- 4 ------------*/
-
-    for(let i = 0;i <= 100;i+=2){
-    console.log(i);
-    }
-
-    /*---------- 5 ------------*/
-
-    for (var i=1; i <= 100; i++){
-        if (i % 3 == 0)
-        console.log(i);
-
-    }
-    
-    /*---------- 6 ------------*/
-
-    let count=0
-
-    for(j=2;j<=100;j++)
-    {
-    for( i=1;i<=j;i++)
-    {
-    if(j%i==0)
-    count++ 
-    }
-
-    if(count==2)
-    console.log(j)
-    count=0      
-    }
-    
-    /*---------- 7 ------------*/;
-
-    let stringSquare = '';
-    for(let i=1; i<=5; i++){
-    for(let j=1; j<=5; j++){
-        stringSquare += '* ';
-    }
-    stringSquare += '\n';
-    }
-    console.log(stringSquare);
-
-    /*---------- 8 ------------*/;
-
-    for(var i=5; i>=1; i--){
-       console.log("* ".repeat(i));
-    }
-
-
-    
-
-
-
-</script>
-
+ </script>
 </body>
+
 </html>
