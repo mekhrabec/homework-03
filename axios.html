@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- <button onclick="addCustomerAxios()" id="addCustomerAxios">Add New Customer With Axios</button>
+    <button onclick="deleteCustomerAxios()" id="deleteCustomerAxios">Delete Customer With Axios</button>
+    <button onclick="updateCustomerAxios()" id="updateCustomerAxios">Update Customer With Axios</button>
+<br>
+<br>
+    <button onclick="addCustomerFetch()" id="addCustomerFetch">Add New Customer With Fetch</button>
+    <button onclick="deleteCustomerFetch()" id="deleteCustomerFetch">Delete Customer With Fetch</button>
+    <button onclick="updateCustomerFetch()" id="updateCustomerFetch">Update Customer With Fetch</button> -->
+
+
+    <script>
+
+    // function postData() {
+    //     let addCustomer = {
+    //         companyName: "Paradox Branding Studio",
+    //         contactName: "Mehrab Mehraliyev",
+    //         contactTitle: "Older Customer",
+    //         address: {
+    //             street: "Baku",
+    //             city: "Baku",
+    //             region: "Yasamal",
+    //         }
+            
+    //     }
+
+    //     axios.post("https://northwind.vercel.app/api/customers", addCustomer)
+    //         .then(res => {
+    //             console.log('Response ', res);
+    //             console.log('Response BODY ', res.data);
+
+    //         })
+    // }
+
+
+
+
+    // function deleteCustomers(id) {
+    //     axios.delete(`https://northwind.vercel.app/api/customers/${id}`)
+    //         .then(res => {
+    //             console.log('Response ', res);
+    //             alert('Success!!');
+    //         })
+    // }
+
+
+
+    // function putCustomers(id) {
+
+    // let updateCustomers = {
+    //     companyName: "Mehrab Mehraliyev",
+    //     contactName: "Bomba Dizaynerdiiii"
+    // }
+
+    // axios.put(`https://northwind.vercel.app/api/customers/${id}`, updateCustomers )
+    //     .then(res => {
+    //         console.log('Response Data ', res.data);
+    //         alert('Success!!');
+    //     })
+    // }
+
+
+
+
+    //    function postData() {
+    //         let addCustomer = {
+    //             companyName: "Paradox Branding Studio",
+    //             contactName: "Mehrab Mehraliyev",
+    //             contactTitle: "Older Customer",
+    //             address: {
+    //                 street: "Baku",
+    //                 city: "Baku",
+    //                 region: "Yasamal",
+    //             }
+            
+    //         }
+
+    //         let requestOptions = {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(addCustomer)
+    //         }
+
+    //         fetch("https://northwind.vercel.app/api/customers", requestOptions)
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 console.log('Data', data);
+    //             })
+    //     }
+
+
+
+
+
+
+
+
+    // function deleteCustomers(id) {
+
+    //     fetch(`https://northwind.vercel.app/api/suppliers/${id}`,
+    //         { method: 'DELETE' }
+    //     )
+    //     .then(res => {
+    //         console.log('Response ', res);
+    //         alert('Success!!')
+    //     })
+    // }
+
+
+
+
+    // function putCustomer() {
+
+    //     let updateCustomer  = {
+    //         companyName: "Mehrab Mehraliyev",
+    //         contactName: "Dizaynerdiiii"
+    //     }
+
+    //     fetch(`https://northwind.vercel.app/api/customers/${"BLAUS"}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(updateCustomer)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log('Data ', data);
+    //             alert('Success!')
+    //         })
+
+    // }
+
+
+    // function mostExpenciveProduct(){
+    //     let prices=[{
+    //         "unitPrice":0
+    //     }]
+
+    //     fetch("https://northwind.vercel.app/api/products")
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         let price=data.forEach(element =>prices.push(element.unitPrice,element.id) )
+    //     })
+    //     let expencive = prices.sort(function(a,b){
+    //         return b.unitPrice-a.unitPrice
+    //     })
+
+    //     console.log(expencive[0])
+    // }
+
+
+
+
+
+    // function averageStock(){
+    //     let stocks=[{
+    //         "unitsInStock": 0,
+    //     }]
+
+    //     fetch("https://northwind.vercel.app/api/products")
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         let price=data.forEach(element =>stocks.push(element.unitsInStock) )
+    //     })
+    // let sum=0;
+    //     for (let i = 0; i < stocks.length; i++) {
+    //         sum+=stocks[i]
+            
+    //     }
+    //     console.log(sum/stocks.length)
+    // }
+
+
+
+
+    // function startingWithC(){
+    //     let startsC=[{
+    //     }]
+
+    //         fetch("https://northwind.vercel.app/api/products")
+    //         .then(res=>res.json())
+    //         .then(data=>{
+    //             let price=data.forEach(element =>startsC.push(element.name) )
+    //         })
+
+    //         let startsWithC=startsC.startsWith('C')
+
+    //         console.log(startsWithC)
+    // }
+
+
+
+    // function startingWithC(){
+    //     let startsC=[{
+    //     }]
+    //     fetch("https://northwind.vercel.app/api/products")
+    //         .then(res=>res.json())
+    //         .then(data=>{
+    //             let price=data.forEach(element =>startsC.push(element.name) )
+    //         })
+
+    //         let startsWithC=startsC.startsWith('C')
+
+    //         console.log(startsWithC)
+    // }
+
+
+    function inLondon(){
+
+        instance.get('customers')
+
+            .then(res => {
+                res.data.forEach(elem => {
+                    if(elementt.address?.city == 'London'){
+                        console.log(elementt);
+                    }
+                })
+        })
+
+    }
+
+
+
+    </script>
+</body>
+</html>
